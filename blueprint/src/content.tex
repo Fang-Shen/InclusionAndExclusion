@@ -65,18 +65,21 @@
 \end{definition}
 
 \begin{lemma}\label{List.eq_FinUnion}
+  \leanok
   \lean{List.eq_FinUnion}
   \uses{List.FinUnion}
   Prove that an element is in the union of a list of finite sets if and only if it is in at least one of the sets.
 \end{lemma}
 
 \begin{definition}\label{Multiset.FinUnion}
+  \leanok
   \lean{Multiset.FinUnion}
   \uses{List.FinUnion,List.eq_FinUnion}
   Define the union of a multiset of finite sets indexed by \verb|β|, where each set is given by a function \verb|A : β → Finset α|.
 \end{definition}
 
 \begin{lemma}\label{Multiset.eq_FinUnion}
+  \leanok
   \lean{Multiset.eq_FinUnion}
   \uses{List.FinUnion,List.eq_FinUnion,Multiset.FinUnion}
   Prove that an element is in the union of a multiset of finite sets if and only if it is in at least one of the sets.
@@ -97,7 +100,6 @@
 \section{ToInt}
 
 \begin{definition}\label{toInt}
-  \leanok
   \lean{toInt}
   Assign a value to a proposition. If the proposition holds, assign a value of 1; otherwise, assign a value of 0.
 \end{definition}
@@ -124,12 +126,14 @@
 \end{definition}
 
 \begin{lemma}\label{char_fun_inter}
+  \leanok
   \lean{char_fun_inter}
   \uses{toInt,toInt_and,char_fun}
   The characteristic function of the intersection of two finite sets \verb|A| and \verb|B| is equal to the product of their characteristic functions.
 \end{lemma}
 
 \begin{lemma}\label{char_fun_union}
+  \leanok
   \lean{char_fun_union}
   \uses{toInt,toInt_and,toInt_not,char_fun}
   The characteristic function of the union of two finite sets \verb|A| and \verb|B| is equal to 1 minus the product of 1 minus their characteristic functions.
